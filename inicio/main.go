@@ -3,12 +3,15 @@ package main
 import (
 	"fmt"
 	"inicio/controlstructures"
+	"time"
 )
 
 // "inicio/conversoes"
 
 func main() {
-	fmt.Println(controlstructures.ChallengeSwitch(9.8))
-	fmt.Println(controlstructures.ChallengeSwitch(6.9))
-	fmt.Println(controlstructures.ChallengeSwitch(2.1))
+	fmt.Println(controlstructures.Type(2.3))
+	fmt.Println(controlstructures.Type(1))
+	fmt.Println(controlstructures.Type("Teste"))
+	fmt.Println(controlstructures.Type(func() {}))
+	fmt.Println(controlstructures.Type(time.Now()))
 }
