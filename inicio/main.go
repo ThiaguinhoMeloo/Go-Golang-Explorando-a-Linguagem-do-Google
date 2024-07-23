@@ -7,5 +7,5 @@ import (
 // "inicio/conversoes"
 
 func main() {
-	arrayslicemap.Array()
+	arrayslicemap.SliceMake()
 }
