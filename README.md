@@ -2,7 +2,7 @@
 
 Go (Golang) é uma linguagem moderna, legível, concorrente e é extremamente rápida. Perfeita para aplicações Web!
 
-#O que irei aprender:
+# O que irei aprender:
 
 - Aprender os fundamentos da linguagem
 - Conhecer as estrutura de controles, operadores, funções, ponteiros, struct, interface, polimorfismo...
