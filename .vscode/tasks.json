@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "go",
+			"label": "go: build package",
+			"command": "clear && go build ${fileDirname}",
+			"args": [
+				"${fileDirname}"
+			],
+			"problemMatcher": [
+				"$go"
+			],
+			"group": {
+                "kind": "build",
+                "isDefault": true
+            },
+			"detail": "cd c:\\Users\\ThiagoCorreiadeMelo\\OneDrive - TRANSDATA INDUSTRIA E SERVICOS DE AUTOMACAO LTDA\\Área de Trabalho\\WorkSpace\\Go-Golang-Explorando-a-Linguagem-do-Google; go build ${fileDirname}"
+		}
+	]
+}
