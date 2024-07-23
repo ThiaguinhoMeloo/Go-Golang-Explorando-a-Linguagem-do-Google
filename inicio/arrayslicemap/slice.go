@@ -11,7 +11,7 @@ func Slice() {
 	fmt.Println(a1, s1)
 	fmt.Println(reflect.TypeOf(a1), reflect.TypeOf(s1))
 
-	fmt.Println("---------------------------------------------------------\n")
+	fmt.Println("\n--------------------------------------------------------")
 
 	a2 := [5]int{1, 2, 3, 4, 5}
 
@@ -20,15 +20,15 @@ func Slice() {
 	s2 := a2[1:3]
 	fmt.Println(a2, s2)
 
-	fmt.Println("---------------------------------------------------------\n")
+	fmt.Println("\n--------------------------------------------------------")
 
 	s3 := a2[:2] // novo slice, mas aponta para o mesmo array.
 	fmt.Println(a2, s3)
 
-	fmt.Println("---------------------------------------------------------\n")
+	fmt.Println("\n--------------------------------------------------------")
 
 	// Podemos imaginar um slice como: tamanho e um ponteiro par ao elemento de um array.
 	s4 := s2[:1]
 	fmt.Println(s2, s4)
-	fmt.Println("---------------------------------------------------------\n")
+	fmt.Println("\n--------------------------------------------------------")
 }
