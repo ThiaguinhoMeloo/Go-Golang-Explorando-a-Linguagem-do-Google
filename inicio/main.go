@@ -6,19 +6,26 @@ import (
 )
 
 func main() {
-	var product1 systemsandtypes.Product
-	product1 = systemsandtypes.Product{
-		Name:     "Lapis",
-		Price:    1.79,
-		Discount: 0.05,
+	order := systemsandtypes.Order{
+		UserId: 1,
+		Items: []systemsandtypes.Item{
+			systemsandtypes.Item{
+				ProductId: 1,
+				Qtde:      2,
+				Price:     12.10,
+			},
+			systemsandtypes.Item{
+				ProductId: 2,
+				Qtde:      1,
+				Price:     23.49,
+			},
+			systemsandtypes.Item{
+				ProductId: 11,
+				Qtde:      100,
+				Price:     3.13,
+			},
+		},
 	}
-	fmt.Println(product1, product1.DiscountedProduct())
 
-	product2 := systemsandtypes.Product{
-		"Notebook",
-		1989.90,
-		0.10,
-	}
-
-	fmt.Println(product2.DiscountedProduct())
+	fmt.Printf("Valor total do pedido é R$ %.2f", order.Amount())
 }
