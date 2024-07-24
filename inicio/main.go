@@ -1,10 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"inicio/functions"
 )
 
 func main() {
-	approveds := []string{"Maria", "Pedro", "Guilherme", "Allan"} // slice
-	functions.PrintApproved(approveds...)
+	result := functions.SimpleRecursion(5)
+	fmt.Println(result)
 }
