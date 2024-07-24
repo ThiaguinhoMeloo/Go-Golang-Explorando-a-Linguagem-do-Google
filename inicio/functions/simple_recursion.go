@@ -7,4 +7,7 @@ func SimpleRecursion(n uint) uint {
 	default:
 		return n * SimpleRecursion(n-1)
 	}
+
+	// result := functions.SimpleRecursion(5)
+	// fmt.Println(result)
 }
