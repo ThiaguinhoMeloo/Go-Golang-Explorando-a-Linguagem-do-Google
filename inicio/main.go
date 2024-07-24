@@ -6,9 +6,6 @@ import (
 )
 
 func main() {
-	x, y := functions.ToReplace(2, 3)
-	fmt.Println(x, y)
-
-	second, first := functions.ToReplace(7, 1)
-	fmt.Println(second, first)
+	result := functions.Exec(functions.Multiplication, 3, 4)
+	fmt.Println(result)
 }
