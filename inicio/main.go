@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"inicio/functions"
 )
 
 func main() {
-	result := functions.Exec(functions.Multiplication, 3, 4)
-	fmt.Println(result)
+	approveds := []string{"Maria", "Pedro", "Guilherme", "Allan"} // slice
+	functions.PrintApproved(approveds...)
 }
