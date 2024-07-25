@@ -5,6 +5,6 @@ import (
 	"runtime"
 )
 
-func Concorrencia() {
+func NumCPU() {
 	fmt.Println(runtime.NumCPU())
 }

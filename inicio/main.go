@@ -2,20 +2,17 @@ package main
 
 import (
 	"fmt"
-	"inicio/packagesandvisibility"
+	"inicio/concorrencia"
 )
 
 func main() {
-	p1 := packagesandvisibility.Ponto{
-		X: 2.0,
-		Y: 2.0,
-	}
+	c := make(chan int)
+	go concorrencia.TwoThreeFourTimes(2, c)
+	fmt.Println("A")
 
-	p2 := packagesandvisibility.Ponto{
-		X: 2.0,
-		Y: 4.0,
-	}
+	a, b := <-c, <-c //recebendo dados do canal
+	fmt.Println("B")
+	fmt.Println(a, b)
 
-	fmt.Println(packagesandvisibility.CalcularCatetos(p1, p2))
-	fmt.Println(packagesandvisibility.Distancia(p1, p2))
+	fmt.Println(<-c)
 }
