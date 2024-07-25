@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	c := make(chan int) // canal sem buffer
-	go concorrencia.Routine(c)
-	fmt.Println(<-c) // operação bloqueante
-	fmt.Println("Foi lido")
-	fmt.Println(<-c) // deadlock
-	fmt.Println("Fim")
+	c := make(chan int, 60)
+	go concorrencia.Cousins(cap(c), c)
+	for cousin := range c {
+		fmt.Printf("%d ", cousin)
+	}
+	fmt.Println("Fim!")
 }
