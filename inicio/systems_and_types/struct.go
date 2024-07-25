@@ -12,7 +12,7 @@ func (p Product) DiscountedProduct() float64 {
 	return p.Price * (1 - p.Discount)
 }
 
-//
+// Struct é um agrupamento de dados.
 // var product1 systemsandtypes.Product
 // product1 = systemsandtypes.Product{
 // 	Name:     "Lapis",

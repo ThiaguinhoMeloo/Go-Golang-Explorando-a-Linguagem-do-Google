@@ -6,26 +6,7 @@ import (
 )
 
 func main() {
-	order := systemsandtypes.Order{
-		UserId: 1,
-		Items: []systemsandtypes.Item{
-			systemsandtypes.Item{
-				ProductId: 1,
-				Qtde:      2,
-				Price:     12.10,
-			},
-			systemsandtypes.Item{
-				ProductId: 2,
-				Qtde:      1,
-				Price:     23.49,
-			},
-			systemsandtypes.Item{
-				ProductId: 11,
-				Qtde:      100,
-				Price:     3.13,
-			},
-		},
-	}
-
-	fmt.Printf("Valor total do pedido é R$ %.2f", order.Amount())
+	fmt.Println(systemsandtypes.NoteForConcept(9.8))
+	fmt.Println(systemsandtypes.NoteForConcept(6.9))
+	fmt.Println(systemsandtypes.NoteForConcept(2.1))
 }
