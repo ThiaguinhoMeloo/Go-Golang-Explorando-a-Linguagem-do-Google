@@ -1,31 +1,21 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	systemsandtypes "inicio/systems_and_types"
+	"inicio/packagesandvisibility"
 )
 
 func main() {
-	//struct para Json
-	p1 := systemsandtypes.ProductJson{
-		ID:    1,
-		Name:  "Notebook",
-		Price: 1899.90,
-		Tags: []string{
-			"Promoção",
-			"Eletrônico",
-		},
+	p1 := packagesandvisibility.Ponto{
+		X: 2.0,
+		Y: 2.0,
 	}
 
-	p1Json, _ := json.Marshal(p1)
-	fmt.Println(string(p1Json))
+	p2 := packagesandvisibility.Ponto{
+		X: 2.0,
+		Y: 4.0,
+	}
 
-	fmt.Println("\n--------------------------------------------------------")
-	//Json para struct
-	var p2 systemsandtypes.ProductJson
-	jsonString := `{"id":2,"nome":"Caneta","preco":8.90,"tags":["Papelaria","Importado"]}`
-	json.Unmarshal([]byte(jsonString), &p2)
-	fmt.Println(p2.Tags[1])
-
+	fmt.Println(packagesandvisibility.CalcularCatetos(p1, p2))
+	fmt.Println(packagesandvisibility.Distancia(p1, p2))
 }
