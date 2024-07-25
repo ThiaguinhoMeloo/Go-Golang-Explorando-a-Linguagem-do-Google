@@ -6,7 +6,19 @@ import (
 )
 
 func main() {
-	fmt.Println(systemsandtypes.NoteForConcept(9.8))
-	fmt.Println(systemsandtypes.NoteForConcept(6.9))
-	fmt.Println(systemsandtypes.NoteForConcept(2.1))
+	car1 := systemsandtypes.Ferrari2{
+		Model:        "F40",
+		TurboOn:      false,
+		CurrentSpeed: 0,
+	}
+	car1.TurnOnTurbo()
+
+	var car2 systemsandtypes.Sports = &systemsandtypes.Ferrari2{
+		Model:        "F40",
+		TurboOn:      false,
+		CurrentSpeed: 0,
+	}
+	car2.TurnOnTurbo()
+
+	fmt.Println(car1, car2)
 }
