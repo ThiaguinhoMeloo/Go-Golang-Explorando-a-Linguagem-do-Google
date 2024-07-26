@@ -1,17 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"inicio/estrutura"
+	"inicio/http"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-	db, err := estrutura.ConnectDbMyDql()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	estrutura.SelectMySql(db)
+	http.Static()
 }

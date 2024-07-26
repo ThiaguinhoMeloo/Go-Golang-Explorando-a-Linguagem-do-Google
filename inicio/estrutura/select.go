@@ -22,3 +22,12 @@ func SelectMySql(db *sql.DB) {
 		fmt.Println(u)
 	}
 }
+
+// func main() {
+// 	db, err := estrutura.ConnectDbMyDql()
+// 	if err != nil {
+// 		fmt.Println(err.Error())
+// 	}
+
+// 	estrutura.SelectMySql(db)
+// }
