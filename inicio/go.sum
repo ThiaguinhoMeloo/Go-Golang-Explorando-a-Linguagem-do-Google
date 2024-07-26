@@ -1,4 +1,6 @@
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+github.com/ThiaguinhoMeloo/html v0.0.0-20240726183131-f1eb39ef72cb h1:rvpCiOUdwg2XJefVeNZ2j3A5qvC2Jnz+OcDVxENHtA8=
+github.com/ThiaguinhoMeloo/html v0.0.0-20240726183131-f1eb39ef72cb/go.mod h1:9SB2Q9jxDFIbsMU7vpCe3k/NynehHFfM6pQT+JJTsgs=
 github.com/go-sql-driver/mysql v1.8.1 h1:LedoTUt/eveggdHS9qUFC1EFSa8bU2+1pZjSRpvNJ1Y=
 github.com/go-sql-driver/mysql v1.8.1/go.mod h1:wEBSXgmK//2ZFJyE+qWnIsVGmvmEKlqwuVSjsCm7DZg=

@@ -31,9 +31,12 @@ func JoinMult(input1, input2 <-chan string) <-chan string {
 	return c
 }
 
+// "github.com/ThiaguinhoMeloo/html"
 // func main() {
 // 	c := concorrencia.JoinMult(concorrencia.SpeakMult("João"), concorrencia.SpeakMult("Maria"))
 // 	fmt.Println(<-c, <-c)
 // 	fmt.Println(<-c, <-c)
 // 	fmt.Println(<-c, <-c)
+// c := html.Title("https://google.com")
+// fmt.Println(<-c)
 // }

@@ -2,12 +2,16 @@ package main
 
 import (
 	"fmt"
-	"inicio/concorrencia"
+	"inicio/estrutura"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-	c := concorrencia.JoinMult(concorrencia.SpeakMult("João"), concorrencia.SpeakMult("Maria"))
-	fmt.Println(<-c, <-c)
-	fmt.Println(<-c, <-c)
-	fmt.Println(<-c, <-c)
+	db, err := estrutura.ConnectDbMyDql()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	estrutura.SelectMySql(db)
 }
