@@ -1,11 +1,16 @@
 package main
 
 import (
-	"inicio/http"
+	resquest "inicio/http"
+	"log"
+	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-	http.Static()
+
+	http.HandleFunc("/usuarios/", resquest.UserHandler)
+	log.Println("Executando...")
+	log.Fatal(http.ListenAndServe(":3000", nil))
 }

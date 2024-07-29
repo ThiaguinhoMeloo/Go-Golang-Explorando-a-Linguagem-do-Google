@@ -12,3 +12,15 @@ func Static() {
 	log.Println("Executando...")
 	log.Fatal(http.ListenAndServe(":3000", nil))
 }
+
+// package main
+
+// import (
+// 	"inicio/http"
+
+// 	_ "github.com/go-sql-driver/mysql"
+// )
+
+// func main() {
+// 	http.Static()
+// }
