@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Atual</title>
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/horaCerta', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('clock').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+</head>
+<body onload="updateClock()">
+   <h1> Hora Atual : <span id="clock">{{.HoraCerta}}</span></h1> 
+</body>
+</html>

@@ -66,3 +66,10 @@ func allUsers(w http.ResponseWriter, r *http.Request, db *sql.DB) {
 	w.Header().Set("Content-type", "application/json")
 	fmt.Fprint(w, string(json))
 }
+
+// func main() {
+
+// 	http.HandleFunc("/usuarios/", resquest.UserHandler)
+// 	log.Println("Executando...")
+// 	log.Fatal(http.ListenAndServe(":3000", nil))
+// }
