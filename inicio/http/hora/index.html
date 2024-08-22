@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora Atual</title>
-    <style> 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f0f0f0;
-            margin: 0;
-            color: #333;
-        }
-        h1 {
-            font-size: 2em;
-            color: #333;
-        }
-    </style>
-    <script>
-        function updateClock() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/horaCerta', true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    document.getElementById('clock').innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hora Atual</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      margin: 0;
+      color: #00ff00;
+    }
+    h1 {
+      font-size: 4em;
+      margin: 0;
+      text-shadow: 0 0 10px #00ff00;
+    }
+    #clock {
+      font-size: 1.2em;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #000;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      #clock {
+        font-size: 1em;
+      }
+    }
+  </style>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
 
-        setInterval(updateClock, 1000);
-    </script>
+      const timeString = `${hours}:${minutes}:${seconds}`;
+      document.getElementById('clock').textContent = timeString;
+    }
+
+    setInterval(updateClock, 1000);
+    window.onload = updateClock;
+  </script>
 </head>
-<body onload="updateClock()">
-   <h1> Hora Atual : <span id="clock">{{.HoraCerta}}</span></h1> 
+<body>
+  <h1><span id="clock"></span></h1>
 </body>
 </html>
