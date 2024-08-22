@@ -6,11 +6,11 @@ import (
 	"time"
 )
 
-var tpl *template.Template
-
 type Hora struct {
 	Hora string
 }
+
+var tpl *template.Template
 
 func CurrentTime(w http.ResponseWriter, r *http.Request) {
 	// http.ServeFile(w, r, "http/hora/index.html")
